@@ -3,12 +3,13 @@ module Kosher
     include Comparable
     include Virtus
 
-    attribute :id,          String
-    attribute :dispatch,    Dispatch
-    attribute :item,        Item
-    attribute :marketplace, String
-    attribute :seller,      Seller
-    attribute :uri,         String
+    attribute :id,                  String
+    attribute :dispatch,            Dispatch
+    attribute :item,                Item
+    attribute :marketplace,         String
+    attribute :seller,              Seller
+    attribute :uri,                 String
+    attribute :eligible_for_prime,  Boolean, default: false
 
     def <=>(other)
       price <=> other.price
